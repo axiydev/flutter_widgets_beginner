@@ -16,12 +16,22 @@ class _ThirdPageState extends State<ThirdPage> {
       body: Container(
         height: 200,
         width: 200,
-        padding: const EdgeInsets.only(left: 20),
-        color: Colors.green,
-        alignment: Alignment.topLeft,
-        child: const Icon(
-          Icons.alarm,
-          size: 30,
+        // margin: const EdgeInsets.only(top: 20, left: 20),
+        padding: const EdgeInsets.all(20),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: Colors.green,
+        ),
+        // alignment: Alignment.topLeft,
+        child: const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: Icon(
+              Icons.alarm,
+              size: 30,
+            ),
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
