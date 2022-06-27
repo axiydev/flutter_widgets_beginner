@@ -4,6 +4,8 @@ import 'package:flutter_widgets_beginner/pages/five_page/five_page.dart';
 import 'package:flutter_widgets_beginner/pages/fourth_page/fourth_page.dart';
 import 'package:flutter_widgets_beginner/pages/home_page/home_page.dart';
 import 'package:flutter_widgets_beginner/pages/lesson_6/lesson_6.dart';
+import 'package:flutter_widgets_beginner/pages/lesson_page/lesson_page.dart';
+import 'package:flutter_widgets_beginner/pages/other_page/other_page.dart';
 import 'package:flutter_widgets_beginner/pages/other_rw_page/other_rw.dart';
 import 'package:flutter_widgets_beginner/pages/second_page/second_page.dart';
 import 'package:flutter_widgets_beginner/pages/six_page/six_page.dart';
@@ -35,7 +37,9 @@ class MyApp extends StatelessWidget {
         Lesson6Page.path: (context) => const Lesson6Page(),
         DrowPage.path: (context) => const DrowPage(),
         TilePage.path: (context) => const TilePage(),
-        OtherRwPage.path: (context) => const OtherRwPage()
+        OtherRwPage.path: (context) => const OtherRwPage(),
+        PageExample.path: (context) => const PageExample(),
+        OtherPageForTab.path: (context) => const OtherPageForTab()
       },
       initialRoute: HomePage.path,
     );

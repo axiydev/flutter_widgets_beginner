@@ -50,39 +50,93 @@ class _OtherRwPageState extends State<OtherRwPage> {
     return Scaffold(
         appBar: AppBar(),
         body: SafeArea(
-          child: SizedBox(
-            height: 200,
-            child: ListView.builder(
-              shrinkWrap: true,
-              itemCount: myList.length,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => Padding(
+          child: GridView.count(
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
+            crossAxisCount: 3,
+            physics: const BouncingScrollPhysics(
+                parent: AlwaysScrollableScrollPhysics()),
+            shrinkWrap: true,
+            childAspectRatio: 10 / 12, //   x / y
+            children: [
+              Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: _customWidget(
-                    imageUrl: myList[index].imageUrl, name: myList[index].name),
+                    imageUrl:
+                        "https://i.pinimg.com/originals/f6/7d/fe/f67dfefbf70944d426cebf2f5d0b1a3a.jpg",
+                    name: "Salom"),
               ),
-            ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: _customWidget(
+                    imageUrl:
+                        "https://i.pinimg.com/originals/f6/7d/fe/f67dfefbf70944d426cebf2f5d0b1a3a.jpg",
+                    name: "Salom"),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: _customWidget(
+                    imageUrl:
+                        "https://i.pinimg.com/originals/f6/7d/fe/f67dfefbf70944d426cebf2f5d0b1a3a.jpg",
+                    name: "Salom"),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: _customWidget(
+                    imageUrl:
+                        "https://i.pinimg.com/originals/f6/7d/fe/f67dfefbf70944d426cebf2f5d0b1a3a.jpg",
+                    name: "Salom"),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: _customWidget(
+                    imageUrl:
+                        "https://i.pinimg.com/originals/f6/7d/fe/f67dfefbf70944d426cebf2f5d0b1a3a.jpg",
+                    name: "Salom"),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: _customWidget(
+                    imageUrl:
+                        "https://i.pinimg.com/originals/f6/7d/fe/f67dfefbf70944d426cebf2f5d0b1a3a.jpg",
+                    name: "Salom"),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: _customWidget(
+                    imageUrl:
+                        "https://i.pinimg.com/originals/f6/7d/fe/f67dfefbf70944d426cebf2f5d0b1a3a.jpg",
+                    name: "Salom"),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: _customWidget(
+                    imageUrl:
+                        "https://i.pinimg.com/originals/f6/7d/fe/f67dfefbf70944d426cebf2f5d0b1a3a.jpg",
+                    name: "Salom"),
+              ),
+            ],
           ),
         ));
   }
 
   Widget _customWidget({String? name, String? imageUrl}) {
-    return Container(
-      height: 200,
-      width: 200,
+    return Card(
       color: Colors.red,
-      alignment: Alignment.center,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          CachedNetworkImage(
-            imageUrl: imageUrl!,
-            width: 100,
-            fit: BoxFit.cover,
-            errorWidget: (context, url, child) => const FlutterLogo(size: 50),
-          ),
-          Text(name!),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            CachedNetworkImage(
+              imageUrl: imageUrl!,
+              width: 100,
+              fit: BoxFit.cover,
+              errorWidget: (context, url, child) => const FlutterLogo(size: 50),
+            ),
+            Text(name!),
+          ],
+        ),
       ),
     );
   }
