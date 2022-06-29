@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets_beginner/pages/home_page/widgets/custom_tile_widget.dart';
-import 'package:flutter_widgets_beginner/pages/other_page/other_page.dart';
+import 'package:flutter_widgets_beginner/pages/lesson_sliver/page_sliver.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
@@ -282,7 +282,7 @@ class _HomePageState extends State<HomePage> {
                 tooltip: 'Bosma kuyasan',
                 onPressed: () {
                   _counter = _counter! + 1;
-                  Navigator.of(context).pushNamed(OtherPageForTab.path);
+                  Navigator.of(context).pushNamed(PageSliver.path);
                   setState(() {});
                 },
                 child: const Icon(CupertinoIcons.add),
